@@ -1,0 +1,218 @@
+/* ===== RESET & DASAR ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+/* ===== NAVBAR ATAS ===== */
+.left-menu {
+  width: 100%;
+  background-color: #fcb900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #111;
+  border-radius: 2px;
+}
+
+.left-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.left-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.left-links a:hover,
+.left-links a.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.avatar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.avatar-mini {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* ===== SECTION UMUM ===== */
+.section {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* ===== HOME SECTION ===== */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.home-text {
+  flex: 1;
+  text-align: left;
+}
+
+.home-image {
+  flex: 1;
+  text-align: right;
+}
+
+.home-image img {
+  max-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== TOMBOL ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fcb900;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.btn:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+/* ===== KONTAK BUTTON ===== */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* ===== SCROLLBAR CUSTOM ===== */
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fcb900;
+  border-radius: 50px;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #fcb900 transparent;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .left-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .left-links.show {
+    display: flex;
+  }
+
+  .avatar-mini {
+    width: 40px;
+    height: 40px;
+  }
+
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-image {
+    order: -1;
+    text-align: center;
+  }
+
+  .home-image img {
+    max-width: 180px;
+    margin-bottom: 15px;
+  }
+
+  .home-text {
+    text-align: center;
+  }
+}
